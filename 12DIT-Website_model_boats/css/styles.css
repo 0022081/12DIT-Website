@@ -1,0 +1,696 @@
+/* CSS HEX */
+general {
+    --black: #000000;
+    --royal-blue-traditional: #1b2166;
+    --yinmn-blue: #295173;
+    --teal: #368180;
+    --timberwolf: #d6d6d6;
+    --white: #ffffff;
+}
+
+/* General styles ----------------------------------------------------------------------*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding-top: 90px;
+    background-color: #d6d6d6;
+}
+
+
+/* Links --------------------------------------------------------------------------------*/
+.link {
+    position: relative;
+    color: #368180;
+    text-decoration: none;
+    display: inline-block;
+}
+  
+  .link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px; 
+    background-color: #368180;
+    transition: width 0.4s ease, left 0.4s ease;
+}
+  
+  .link:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+.h2-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    flex: 1;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.h2-header span {
+    border-bottom: 2px solid #000000;
+    width: calc(100% + 5px);
+}
+
+
+/* Header container -------------------------------------------------------------------------------*/
+#header-container {
+    background-color: #000000; /* Navy blue background */
+    color: #000000;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#info-box {
+    display: flex;
+    background-color: #fff;
+    flex-direction: row;
+    align-items: flex-end;
+    vertical-align: middle;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    padding: 5px;
+}
+
+#info-box .text {
+    font-size: 12px;
+    padding: 2px;
+    margin-left: auto;
+    margin-right: 10px;
+    text-align: right;
+}
+
+/* Images */
+#logo img {
+    height: 70px;
+    margin-left: 20px;
+    margin-right: auto;
+    padding: 10px;
+    border-radius: 17px;
+}
+
+
+#nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    background-color: #090732;
+    z-index: 200;
+    transition: all 0.5s ease-in-out;
+    transform: translateY(0);
+}
+
+#nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-grow: 1;
+}
+
+#nav ul li {
+    margin: 0 10px;
+}
+
+#nav ul li a {
+    color: #ffffff; /* Gold color */
+    text-decoration: none;
+    padding: 17px 20px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    font-size: 20px;
+}
+
+#nav ul li a {
+    color: #ffffff; /* Gold color */
+    text-decoration: none;
+    padding: 17px 20px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative; /* Add this to allow for absolute positioning of the lines */
+}
+
+#nav ul li a:before, #nav ul li a:after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    background-color: #48adabff; /* Purple color */
+    transition: width 0.5s ease-in-out, left 0.5s ease-in-out, right 0.5s ease-in-out;
+}
+
+#nav ul li a:before {
+    top: -5px; /* Move the top line above the text */
+    left: 50%;
+    width: 0;
+    right: 50%;
+}
+
+#nav ul li a:after {
+    bottom: -5px; /* Move the bottom line below the text */
+    left: 50%;
+    width: 0;
+    right: 50%;
+}
+
+#nav ul li a:hover:before, #nav ul li a:hover:after {
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+
+#nav ul li a:not(:hover):before, #nav ul li a:not(:hover):after {
+    width: 0;
+    left: 50%;
+    right: 50%;
+}
+
+
+/* Swiper Section */
+#swiper-slideshow {
+    position: relative;
+    height: calc(100vh - 115px);
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    z-index: 0;
+}
+
+/* Swiper Background */
+.swiper-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://i.postimg.cc/9f0dnvF1/Screenshot-2024-08-12-202950.png');
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+    z-index: 1;
+  }
+
+.swiper {
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    height: 100%;
+
+    /* Swiper nav styleing */
+    --swiper-navigation-size: 44px;
+    --swiper-navigation-top-offset: 50%;
+    --swiper-navigation-sides-offset: 10px;
+    --swiper-navigation-color: #ffff;
+
+    /* Pagination styling*/
+    --swiper-pagination-color: #48adabff;
+    --swiper-pagination-bullet-inactive-color: #000;
+    --swiper-pagination-bullet-size: 16px;
+
+}
+
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper-slide img {
+    width: auto;
+    height: 100%;
+    justify-content: center;
+}
+
+.swiper-button-prev:hover, .swiper-button-next:hover {
+    transform: scale(1.1);
+}
+
+.slideshow-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 3;
+}
+
+/* Information section below slideshow -----------------------------------------------------------------*/
+#about-me-container {
+    display: flex;
+    margin-top: 0;
+    flex-direction: row;
+    background-color: #d6d6d6;
+    position: relative;
+    overflow: visible;
+    padding: 10px;
+    height: 750px;
+}
+
+#about-me-img-container {
+    width: 50%;
+    display: flex;
+    background-color: #d6d6d6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+}
+
+#about-me-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#about-me-text-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    width: 45%;
+    flex: 1;
+    margin: 20px;
+    overflow: auto;
+    max-height: 100%;
+}
+
+.about-me-text {
+    text-align: left;
+    margin-bottom: 20px;
+}
+   
+.about-me-text p {
+    line-height: 1.4;
+    color: #000000;
+    font-size: 14;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+/* Sub page General styles -----------------------------------------------------------*/
+/* Initial Background image and Page Header text container */
+.page-header-container {
+    height: 400px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+/* Page background image */
+.page-bg {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    background: url('https://i.postimg.cc/FHN53xsh/Screenshot-2024-08-12-202942.png');
+    background-size: cover;
+    background-position: center;
+    filter: blur(6px);
+}
+
+/* Page headers */
+.page-h3-heading, .page-h1-heading {
+    position: absolute;
+    display: flex;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+}
+
+.page-h1-heading {
+    margin-top: 100px;
+}
+
+.page-h3-heading {
+    margin-top: 40px;
+}
+
+.page-h3-heading h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.page-h1-heading h1 {
+    font-size: 64px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Page seperating box - under bg image */
+.page-break-box {
+    height: 10px;
+    width: 100%;
+    background-color: #1b2166;
+    z-index: 4;
+}
+
+/* Contact Us Page --------------------------------------------------------------------*/
+.contact-section {
+    display: flex;
+    margin-top: 0;
+    background-color: #d6d6d6;
+    position: relative;
+    overflow: visible;
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+}
+
+#cont-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    background-color: #d6d6d6;
+}
+
+.column {
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+#cont-h2-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.form input[type="text"], textarea {
+    border-width: 1px;
+    border-color: #c0c6cc;
+    border-style: solid;
+    background-color: #fff;
+    border-radius: 6px;
+    line-height: 1.4;
+    color: #222;
+    padding: 12px;
+    margin: 10px;
+    width: -webkit-fill-available;
+    font-family: sans-serif;
+    resize: vertical;
+}
+
+.form input[type="text"]::placeholder {
+    text-align: left;
+    vertical-align: top;
+}
+
+#message {
+    height: 100px;
+}
+
+.form input[type="submit"] {
+    background-color: #368180;
+    color: #fff;
+    padding: 15px 35px;
+    border: solid;
+    border-width: 2px;
+    border-color: #368180;
+    border-radius: 7px;
+    font-size: 17px;
+}
+
+.form input[type="submit"]:hover {
+    background-color: #fff;
+    color: #222;
+    border: solid;
+    border-width: 2px;
+    border-color: #090732;
+    transition: 0.3s ease-in-out
+}
+
+/* Right colum information */
+#alternative-contact-info {
+    display: block;
+}
+
+#alternative-contact-info p, a {
+    justify-content: center;
+    color: #000000;
+    font-size: 17px;
+}
+
+/* Process page -------------------------------------------------------------------------*/
+.process-section {
+    display: block;
+}
+
+#process-bg {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    background-size: cover;
+    background-position: center;
+    filter: blur(6px);
+    background: url('https://i.postimg.cc/0yVk8R32/Screenshot-2024-08-12-202841.png');
+}
+
+.process-section .page-header-container .page-h1-heading h1, .process-section .page-header-container .page-h3-heading h3 {
+    color: #000;
+}
+
+.process-page-container {
+    position: relative;
+    height: calc(2* (100vh - 50px));
+    width: 100%;
+    background-color: #d6d6d6;
+    margin: 0 auto;
+}
+
+/* Research Section --------------------- */
+.research-container {
+    height: 50%;
+    width: 100%;
+    display: flex;
+}
+
+.research-img-container {
+    width: 50%;
+    background-color: #d6d6d6;
+    background-image: url('https://i.postimg.cc/3rc5JBQp/pikaso-texttoimage-notebook-and-penicl-with-a-boat-blueprint-design-i.jpg');
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    order: 2;
+}
+
+.research-text-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    background-color: #d6d6d6;
+    padding: 75px;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    order: 1;
+}
+
+.research-text-container .h2-header, .design-text-container .h2-header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    max-height: min-content;
+}
+
+.processes-text p {
+    font-size: 14px;
+    color: #000;
+    line-height: 1.4;
+}
+
+/* Design Section --------------------- */
+.design-container {
+    height: 50%;
+    width: 100%;
+    display: flex;
+}
+
+.design-img-container {
+    width: 50%;
+    background-color: #d6d6d6;
+    background-image: url('https://i.postimg.cc/zfG3Y71M/pikaso-texttoimage-wooden-sailboat-design-blueprint-plans-front-side.jpg');
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+}
+
+.design-text-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    background-color: #d6d6d6;
+    padding: 75px;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* Build Section --------------------- */
+.build-container {
+    height: 50%;
+    width: 100%;
+    display: flex;
+}
+
+.build-img-container {
+    width: 50%;
+    background-color: #d6d6d6;
+    background-image: url('https://i.postimg.cc/Yq2JHg2h/pikaso-texttoimage-workbench-with-wooden-hand-tools-in-the-process-of.jpg');
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    order: 2;
+}
+
+.build-text-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    background-color: #d6d6d6;
+    padding: 75px;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    order: 1;
+}
+
+/* Designs Page -------------------------------------------------------------------------*/
+.designs-section {
+    display: flex;
+    margin-top: 0;
+    background-color: #d6d6d6;
+    position: relative;
+    overflow: visible;
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+}
+
+#designs-bg {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    background: url('https://i.postimg.cc/hvZrRBMY/Screenshot-2024-08-12-202851.png');
+    background-size: cover;
+    background-position: center;
+    filter: blur(2px);
+}
+
+.designs-page-container {
+    position: relative;
+    height: calc(2* (100vh - 50px));
+    width: 100%;
+    background-color: #d6d6d6;
+    margin: 0 auto;
+}
+
+
+
+/* Footer --------------------------------------------------------------------------------*/
+#footer-container {
+    background-color: #090732; /* Navy blue */
+    color: #f4f4f4;
+    padding: 10px;
+}
+
+#footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#footer-logo {
+    margin-left: 20px;
+}
+
+#footer-logo img {
+    width: 140px;
+    border-radius: 7px;
+}
+
+#rights-text {
+    flex: 1;
+    font-size: 12px;
+    text-align: center;
+}
+
+#contact-us {
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: felx-end;
+}
+
+#contact-us .contact-text {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.contact-images {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: 10px;
+}
+
+.phone-btn, .email-btn {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    justify-content: center;
+    border-radius: 15px;
+}
+
+.phone-btn img, .email-btn img {
+    height: 28px;
+    padding: 2px;
+    transition: all 0.5s ease-in-out;
+}
+
+.phone-btn:hover, .email-btn:hover {
+    background-color: #48adabff;
+}
