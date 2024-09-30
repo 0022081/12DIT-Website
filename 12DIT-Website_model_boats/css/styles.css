@@ -488,15 +488,22 @@ body {
 
 .process-page-container {
     position: relative;
-    height: calc(2* (100vh - 50px));
+    height: calc(3 * (100vh - 90px));
     width: 100%;
     background-color: #d6d6d6;
     margin: 0 auto;
 }
 
+.research-text-container .h2-header, .design-text-container .h2-header, .build-text-container .h2-header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    max-height: min-content;
+}
+
 /* Research Section --------------------- */
 .research-container {
-    height: 50%;
+    height: 33.33%;
     width: 100%;
     display: flex;
 }
@@ -523,13 +530,6 @@ body {
     order: 1;
 }
 
-.research-text-container .h2-header, .design-text-container .h2-header {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    max-height: min-content;
-}
-
 .processes-text p {
     font-size: 14px;
     color: #000;
@@ -538,7 +538,7 @@ body {
 
 /* Design Section --------------------- */
 .design-container {
-    height: 50%;
+    height: 33.33%;
     width: 100%;
     display: flex;
 }
@@ -565,7 +565,7 @@ body {
 
 /* Build Section --------------------- */
 .build-container {
-    height: 50%;
+    height: 33.4%;
     width: 100%;
     display: flex;
 }
@@ -618,13 +618,47 @@ body {
 
 .designs-page-container {
     position: relative;
-    height: calc(2* (100vh - 50px));
+    max-height: max-content;
     width: 100%;
     background-color: #d6d6d6;
     margin: 0 auto;
 }
 
 
+.model-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    padding: 20px;
+}
+  
+.model-card {
+    flex: 1 1 calc(25% - 20px); 
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+  
+.model-card img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.model-card h3 {
+    margin-top: 10px;
+}
+
+.model-card p {
+    margin-top: 5px;
+}
+  
 
 /* Footer --------------------------------------------------------------------------------*/
 #footer-container {
