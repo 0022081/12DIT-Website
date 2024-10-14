@@ -16,35 +16,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Swiper
   const swiper = new Swiper('.swiper', {
-    
-    
-    // Optional parameters
     direction: 'horizontal',
     loop: true,
     speed: 1200,
     effect: 'coverflow',
-    centeredSlide: true,
-
-    coverflow: {
+    centeredSlides: true,
+  
+    coverflowEffect: {
+      rotate: 30,
+      stretch: 10,
+      depth: 200,
+      modifier: 1,
       slideShadows: false,
     },
-
-    // Autoplay
+    
     autoplay: {
       delay: 3000,
-      disableOninteraction: false,
+      disableOnInteraction: false,
     },
-
-    // Pagination
+  
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
     },
-
-    // Navigation
+  
     navigation: {
       nextEl: '.swiper-button-next',
-      prevEL: '.swiper-button-prev',
+      prevEl: '.swiper-button-prev',
     },
   });
 });
