@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const swiper = new Swiper('.swiper', {
     direction: 'horizontal',
     loop: true,
-    speed: 1200,
+    speed: 1600,
     effect: 'coverflow',
     centeredSlides: true,
   

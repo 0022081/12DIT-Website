@@ -8,6 +8,43 @@ general {
     --white: #ffffff;
 }
 
+/* Font Styles ------------------------------------------------------------------------*/
+
+/* Header */
+.roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+  
+.vollkorn-sc-bold {
+    font-family: "Vollkorn SC", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+/* Home Page Quote */
+.pinyon-script-regular {
+    font-family: "Pinyon Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+
+/* Paragraph */
+.ibm-plex-serif-regular {
+    font-family: "IBM Plex Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+.rye-regular {
+    font-family: "Rye", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
 /* General styles ----------------------------------------------------------------------*/
 body {
     font-family: Arial, sans-serif;
@@ -25,7 +62,7 @@ body {
     display: inline-block;
 }
   
-  .link::before {
+.link::before {
     content: '';
     position: absolute;
     bottom: 0;
@@ -36,9 +73,16 @@ body {
     transition: width 0.4s ease, left 0.4s ease;
 }
   
-  .link:hover::before {
+.link:hover::before {
     width: 100%;
     left: 0;
+}
+
+.page-h1-heading h1 {
+    font-family: "Vollkorn SC", serif;
+    font-size: 64px;
+    font-weight: bold;
+    color: #ffffff;
 }
 
 .h2-header {
@@ -49,6 +93,7 @@ body {
     font-size: 24px;
     font-weight: bold;
     color: #000000;
+    font-family: "Rye", serif;
 }
 
 .h2-header span {
@@ -56,6 +101,19 @@ body {
     width: calc(100% + 5px);
 }
 
+.page-h3-heading h3 {
+    font-family: "Vollkorn SC", serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+p {
+    line-height: 1.4;
+    color: #000000;
+    font-size: 15px;
+    font-family: "IBM Plex Serif", serif;
+}
 
 /* Header container -------------------------------------------------------------------------------*/
 #header-container {
@@ -105,7 +163,6 @@ body {
     width: 100%;
     display: flex;
     align-items: center;
-    margin-right: 20px;
     background-color: #090732;
     z-index: 200;
     transition: all 0.5s ease-in-out;
@@ -132,6 +189,7 @@ body {
     vertical-align: middle;
     position: relative;
     font-size: 20px;
+    font-family: "Roboto", sans-serif;
 }
 
 #nav ul li a {
@@ -182,7 +240,7 @@ body {
 #swiper-slideshow {
     position: relative;
     height: calc(100vh - 115px);
-    width: 100vw;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -245,9 +303,9 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-family: "Pinyon Script", cursive;
     color: #ffffff;
-    font-size: 48px;
-    font-weight: bold;
+    font-size: 56px;
     text-align: center;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     z-index: 3;
@@ -302,11 +360,9 @@ body {
 }
    
 .about-me-text p {
-    line-height: 1.4;
-    color: #000000;
-    font-size: 14;
     text-align: justify;
     margin-bottom: 10px;
+    margin-right: 10px;
 }
 
 /* Sub page General styles -----------------------------------------------------------*/
@@ -349,18 +405,6 @@ body {
 
 .page-h3-heading {
     margin-top: 40px;
-}
-
-.page-h3-heading h3 {
-    font-size: 24px;
-    font-weight: bold;
-    color: #ffffff;
-}
-
-.page-h1-heading h1 {
-    font-size: 64px;
-    font-weight: bold;
-    color: #ffffff;
 }
 
 /* Page seperating box - under bg image */
@@ -462,8 +506,6 @@ body {
 
 #alternative-contact-info p, a {
     justify-content: center;
-    color: #000000;
-    font-size: 17px;
 }
 
 /* Process page -------------------------------------------------------------------------*/
@@ -476,10 +518,10 @@ body {
     height: 100%;
     width: 100%;
     z-index: 2;
+    background: url('https://i.postimg.cc/0yVk8R32/Screenshot-2024-08-12-202841.png');
     background-size: cover;
     background-position: center;
-    filter: blur(6px);
-    background: url('https://i.postimg.cc/0yVk8R32/Screenshot-2024-08-12-202841.png');
+    filter: blur(0px);
 }
 
 .process-section .page-header-container .page-h1-heading h1, .process-section .page-header-container .page-h3-heading h3 {
@@ -531,9 +573,7 @@ body {
 }
 
 .processes-text p {
-    font-size: 14px;
-    color: #000;
-    line-height: 1.4;
+  justify-content: left;
 }
 
 /* Design Section --------------------- */
@@ -699,6 +739,8 @@ body {
 #contact-us .contact-text {
     margin-bottom: 10px;
     margin-top: 10px;
+    font-family: "Roboto",  sans-serif;
+    font-size: 18px;
 }
 
 .contact-images {
