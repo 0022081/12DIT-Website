@@ -85,7 +85,7 @@ body {
     color: #ffffff;
 }
 
-.h2-header {
+.h2-header{
     display: flex;
     align-items: center;
     margin-bottom: 10px;
@@ -123,28 +123,6 @@ p {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-}
-
-#info-box {
-    display: flex;
-    background-color: #fff;
-    flex-direction: row;
-    align-items: flex-end;
-    vertical-align: middle;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 2;
-    padding: 5px;
-}
-
-#info-box .text {
-    font-size: 12px;
-    padding: 2px;
-    margin-left: auto;
-    margin-right: 10px;
-    text-align: right;
 }
 
 /* Images */
@@ -198,7 +176,7 @@ p {
     padding: 17px 20px;
     display: inline-block;
     vertical-align: middle;
-    position: relative; /* Add this to allow for absolute positioning of the lines */
+    position: relative;
 }
 
 #nav ul li a:before, #nav ul li a:after {
@@ -210,14 +188,14 @@ p {
 }
 
 #nav ul li a:before {
-    top: -5px; /* Move the top line above the text */
+    top: -5px;
     left: 50%;
     width: 0;
     right: 50%;
 }
 
 #nav ul li a:after {
-    bottom: -5px; /* Move the bottom line below the text */
+    bottom: -5px;
     left: 50%;
     width: 0;
     right: 50%;
@@ -306,6 +284,7 @@ p {
     font-family: "Pinyon Script", cursive;
     color: #ffffff;
     font-size: 56px;
+    font-weight: 500;
     text-align: center;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     z-index: 3;
@@ -445,6 +424,7 @@ p {
     align-items: center;
     padding-left: 10px;
 }
+
 
 .form {
     display: flex;
@@ -697,6 +677,7 @@ p {
 
 .model-card p {
     margin-top: 5px;
+    padding: 5px;
 }
   
 
