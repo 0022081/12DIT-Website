@@ -360,8 +360,6 @@ p {
 .page-header-container {
     height: 400px;
     width: 100%;
-    justify-content: center;
-    align-items: center;
     z-index: 1;
 }
 
@@ -378,23 +376,29 @@ p {
 }
 
 /* Page headers ---------------------------------------------*/
+.page-header-text-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+
 .page-h3-heading, .page-h1-heading {
     position: absolute;
     display: flex;
-    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 2;
+    z-index: 4;
     text-align: center;
     padding: 20px;
 }
 
 .page-h1-heading {
-    margin-top: 100px;
+    top: 35%;
 }
 
 .page-h3-heading {
-    margin-top: 40px;
+    top: 25%;
 }
 
 /* Page seperating box - under bg image --------------------*/
@@ -402,7 +406,7 @@ p {
     height: 10px;
     width: 100%;
     background-color: #1b2166;
-    z-index: 4;
+    z-index: 5;
 }
 
 /* Contact Us Page --------------------------------------------------------------------*/
@@ -694,6 +698,25 @@ p {
     padding: 15px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .model-card {
+        flex: 1 1 calc(33.33% - 20px);
+    }
+}
+
+@media (max-width: 900px) {
+    .model-card {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 600px) {
+    .model-card {
+        flex: 1 1 calc(100% - 20px);
+    }
 }
 
 /* Design Card Image ---------------------- */
