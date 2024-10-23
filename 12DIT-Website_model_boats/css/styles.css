@@ -377,9 +377,12 @@ p {
 
 /* Page headers ---------------------------------------------*/
 .page-header-text-container {
-    display: flex;
-    height: 100%;
-    width: 100%;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    height: 400px;
+    width: 100vw;
 }
 
 
@@ -394,11 +397,11 @@ p {
 }
 
 .page-h1-heading {
-    top: 35%;
+    top: 70%;
 }
 
 .page-h3-heading {
-    top: 25%;
+    top: 55%;
 }
 
 /* Page seperating box - under bg image --------------------*/
