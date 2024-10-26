@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const swiper = new Swiper('.swiper', {
     direction: 'horizontal',
     loop: true,
-    speed: 1600,
+    speed: 2000,
     effect: 'coverflow',
     centeredSlides: true,
   
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     
     autoplay: {
-      delay: 3000,
+      delay: 3200,
       disableOnInteraction: false,
     },
   

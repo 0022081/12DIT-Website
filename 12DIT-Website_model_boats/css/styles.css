@@ -86,18 +86,15 @@ body {
 .h2-header{
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
     flex: 1;
     font-size: 24px;
     font-weight: bold;
     color: #000000;
     font-family: "Rye", serif;
+    border-bottom: 2px solid #000000;
+    width: 100%;
 }
 
-.h2-header span {
-    border-bottom: 2px solid #000000;
-    width: calc(100% + 5px);
-}
 
 .page-h3-heading h3 {
     font-family: "Vollkorn SC", serif;
@@ -254,7 +251,7 @@ p {
     /* Swiper nav styleing */
     --swiper-navigation-size: 44px;
     --swiper-navigation-top-offset: 50%;
-    --swiper-navigation-sides-offset: 10px;
+    --swiper-navigation-sides-offset: 30px;
     --swiper-navigation-color: #ffff;
 
     /* Pagination styling*/
@@ -366,7 +363,8 @@ p {
 /* Page background image ---------------------------------------*/
 .page-bg {
     display: flex;
-    height: 100%;
+    position: fixed;
+    height: 400px;
     width: 100%;
     z-index: 2;
     background: url('https://i.postimg.cc/FHN53xsh/Screenshot-2024-08-12-202942.png');
@@ -382,7 +380,7 @@ p {
     top: 0;
     left: 0;
     height: 400px;
-    width: 100vw;
+    width: 100%;
 }
 
 
@@ -409,6 +407,7 @@ p {
     height: 10px;
     width: 100%;
     background-color: #1b2166;
+    position: relative;
     z-index: 5;
 }
 
@@ -482,7 +481,7 @@ p {
 }
 
 /* Form Submit Button -------------------------------------- */
-.form input[type="submit"] {
+.form button {
     background-color: #368180;
     color: #fff;
     padding: 15px 35px;
@@ -494,7 +493,7 @@ p {
 }
 
 /* Form Submit Button Hover */
-.form input[type="submit"]:hover {
+.form button:hover {
     background-color: #fff;
     color: #222;
     border: solid;
@@ -522,6 +521,7 @@ p {
 /* Process page background image ---------------------------------------*/
 #process-bg {
     display: flex;
+    position: fixed;
     height: 100%;
     width: 100%;
     z-index: 2;
@@ -543,6 +543,7 @@ p {
     width: 100%;
     background-color: #d6d6d6;
     margin: 0 auto;
+    z-index: 5;
 }
 
 /* Process page Subheadings --------------------------------------*/
@@ -681,6 +682,7 @@ p {
     width: 100%;
     background-color: #d6d6d6;
     margin: 0 auto;
+    z-index: 5;
 }
 
 /* Design Card Gallery ------------------------------------ */
@@ -773,6 +775,10 @@ p {
     flex: 1;
     font-size: 12px;
     text-align: center;
+}
+
+#rights-text p {
+    color: white;
 }
 
 /* Footer Contact ------------------------- */
