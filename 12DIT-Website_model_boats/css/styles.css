@@ -411,108 +411,6 @@ p {
     z-index: 5;
 }
 
-/* Contact Us Page --------------------------------------------------------------------*/
-.contact-section {
-    display: flex;
-    margin-top: 0;
-    background-color: #d6d6d6;
-    position: relative;
-    overflow: visible;
-    padding: 10px;
-    height: 100%;
-    width: 100%;
-    z-index: 0;
-}
-
-/* Contact page grid ---------------------------------------*/
-#cont-page {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 100%;
-    background-color: #d6d6d6;
-}
-
-/* Contact page grid columns */
-.column {
-    padding: 20px;
-    background-color: #f8f9fa;
-}
-
-/* Contact page Subheaders ------------------ */
-.cont-h2-heading {
-    display: flex;
-    align-items: center;
-    padding-left: 10px;
-}
-
-/* Contact Form -------------------------------------------- */
-.form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-}
-
-.form input[type="text"], textarea {
-    border-width: 1px;
-    border-color: #c0c6cc;
-    border-style: solid;
-    background-color: #fff;
-    border-radius: 6px;
-    line-height: 1.4;
-    color: #222;
-    padding: 12px;
-    margin: 10px;
-    width: -webkit-fill-available;
-    font-family: sans-serif;
-    resize: vertical;
-}
-
-/* Form placeholder text */
-.form input[type="text"]::placeholder {
-    text-align: left;
-    vertical-align: top;
-}
-
-/* Form message box height */
-#message {
-    height: 100px;
-}
-
-/* Form Submit Button -------------------------------------- */
-.form button {
-    background-color: #368180;
-    color: #fff;
-    padding: 15px 35px;
-    border: solid;
-    border-width: 2px;
-    border-color: #368180;
-    border-radius: 7px;
-    font-size: 17px;
-}
-
-/* Form Submit Button Hover */
-.form button:hover {
-    background-color: #fff;
-    color: #222;
-    border: solid;
-    border-width: 2px;
-    border-color: #090732;
-    transition: 0.3s ease-in-out
-}
-
-/* Right colum information ----------------------------------*/
-#alternative-contact-info {
-    display: block;
-    padding-left: 10px;
-}
-
-/* Right colum information ---------*/
-#alternative-contact-info p, a {
-    justify-content: center;
-}
-
 /* Process page -------------------------------------------------------------------------*/
 .process-section {
     display: block;
@@ -741,6 +639,120 @@ p {
 .model-card p {
     margin-top: 5px;
     padding: 5px;
+}
+
+/* Contact Us Page --------------------------------------------------------------------*/
+.contact-section {
+    display: flex;
+    margin-top: 0;
+    background-color: #d6d6d6;
+    position: relative;
+    overflow: visible;
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+}
+
+#contact-bg {
+    display: flex;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    background: url('https://i.postimg.cc/0yVk8R32/Screenshot-2024-08-12-202841.webp');
+    background-size: cover;
+    background-position: center;
+    filter: blur(0px);
+}
+
+/* Contact page grid ---------------------------------------*/
+#cont-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    background-color: #d6d6d6;
+}
+
+/* Contact page grid columns */
+.column {
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+/* Contact page Subheaders ------------------ */
+.cont-h2-heading {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+/* Contact Form -------------------------------------------- */
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.form input[type="text"], textarea {
+    border-width: 1px;
+    border-color: #c0c6cc;
+    border-style: solid;
+    background-color: #fff;
+    border-radius: 6px;
+    line-height: 1.4;
+    color: #222;
+    padding: 12px;
+    margin: 10px;
+    width: -webkit-fill-available;
+    font-family: sans-serif;
+    resize: vertical;
+}
+
+/* Form placeholder text */
+.form input[type="text"]::placeholder {
+    text-align: left;
+    vertical-align: top;
+}
+
+/* Form message box height */
+#message {
+    height: 100px;
+}
+
+/* Form Submit Button -------------------------------------- */
+.form button {
+    background-color: #368180;
+    color: #fff;
+    padding: 15px 35px;
+    border: solid;
+    border-width: 2px;
+    border-color: #368180;
+    border-radius: 7px;
+    font-size: 17px;
+}
+
+/* Form Submit Button Hover */
+.form button:hover {
+    background-color: #fff;
+    color: #222;
+    border: solid;
+    border-width: 2px;
+    border-color: #090732;
+    transition: 0.3s ease-in-out
+}
+
+/* Right colum information ----------------------------------*/
+#alternative-contact-info {
+    display: block;
+    padding-left: 10px;
+}
+
+/* Right colum information ---------*/
+#alternative-contact-info p, a {
+    justify-content: center;
 }
   
 

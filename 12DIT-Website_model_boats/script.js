@@ -1,7 +1,7 @@
 // Document Event Listener
 document.addEventListener('DOMContentLoaded', () => {
   
-  // Navigation Bar
+  // Navigation Bar --------------------------------------------
   const nav = document.getElementById('nav');
   const orginalColor = getComputedStyle(nav).backgroundColor;
 
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  // Swiper
+  // Swiper ---------------------------------------------------
   const swiper = new Swiper('.swiper', {
     direction: 'horizontal',
     loop: true,
@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     effect: 'coverflow',
     centeredSlides: true,
   
+    // Swiper Slide effect
     coverflowEffect: {
       rotate: 30,
       stretch: 10,
@@ -30,16 +31,19 @@ document.addEventListener('DOMContentLoaded', () => {
       slideShadows: false,
     },
     
+    // Swiper autoplay
     autoplay: {
       delay: 3200,
       disableOnInteraction: false,
     },
-  
+    
+    // Swiper Pagination
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
     },
   
+    // Swiper Navigation
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
